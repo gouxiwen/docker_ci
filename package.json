@@ -8,15 +8,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/su37josephxia/docker_ci.git"
+    "url": "git+https://github.com/gouxiwen/docker_ci.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/su37josephxia/docker_ci/issues"
+    "url": "https://github.com/gouxiwen/docker_ci/issues"
   },
-  "homepage": "https://github.com/su37josephxia/docker_ci#readme",
+  "homepage": "https://github.com/gouxiwen/docker_ci#readme",
   "dependencies": {
     "github-webhook-handler": "^0.7.1"
   }
