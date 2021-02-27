@@ -1,0 +1,28 @@
+version: '3.1'
+services: 
+  app-pm2:
+    container_name: app-pm2
+    #构建容器
+    build: ./backend
+    # 直接从git拉取ssh
+    # build: git@github.com:xxxxx.git
+    # 需要链接本地代码时
+    # volumes:
+    #   -./backend:/usr/src/app
+    ports: 
+      - "3000:3000"
+  mongo:
+    image: mongo
+    restart: always
+    ports: 
+      - "27017:27017"
+  nginx:
+    image: nginx
+    restart: always
+    ports: 
+      - "8091:80"
+    # 映射资源
+    volumes: 
+      - ./nginx/conf.d/:/etc/nginx/conf.d
+      - ./frontend/dist:/var/www/html
+      - ./static/:/static/
