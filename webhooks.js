@@ -15,7 +15,6 @@ function run_cmd(cmd, args, callback) {
 // run_cmd('sh', ['./deploy-dev.sh'], function(text){ console.log(text) });
 
 http.createServer(function (req, res) {
-    console.log(req)
     handler(req, res, function (err) {
         res.statusCode = 404
         res.end('no such location')
